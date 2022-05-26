@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores parte 1</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        html, body{
+            background-image: url(imagens/wallpaper001.jpg);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+            line-height: 1.4em;
+            margin: auto;
+           
+
+        }
+        main {
+            background-color: white;
+            padding: 20px;
+        }
+        pre {
+            margin: 30px;
+            padding: 20px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.408);
+        }
+    
+    </style>
+</head>
+<body>
+    
+    <main>
+    <h1>Operadores - parte I</h1>
+    <ul>
+        <li>Aritiméticos</li>
+        <li>Atribuição</li>
+        <li>Relacionais</li>
+        <li>Lógicos</li>
+        <li>Ternários</li>
+    </ul>
+    <h2>Aritiméticos:</h2>
+    <pre>
+        5 + 2  = 7
+        5 - 2  = 3
+        5 * 2  = 10
+        5 / 2  = 2,5
+        5 % 2  = 1 (resto da divisão)
+        5 ** 2 = 25 (Potência 5²)
+    </pre>
+    <pre>
+        > 5+2
+        7
+        > 9 % 2
+        1
+        > 9 / 2
+        4.5
+    </pre>
+    <pre>
+        > 5 + 3 / 2
+        6.5 -> Essa expressão está sintaticamente correta. Mas aritiméticamente errada se vc queria calcular a média  entre 5 e 3.
+    </pre>
+    <pre>
+        > 5 + / 2
+        5 + / 2
+            ^
+        Uncaught SyntaxError: Invalid regular expression: missing /
+        >
+    </pre>
+    <h2>Precedência:</h2>
+    <p>Obs.: Não receber mensagens de erro não significa que seu programa está certo. Pode não ter erro sintático mas a execução pode estar errada.</p>
+    
+    <h3>Parênteses muda a ordem de precedência.</h3>
+    <pre>
+        > 5 + 3 / 2
+        6.5
+        > (5 + 3) / 2
+        4
+    </pre>
+    
+    <pre>
+        () -> Parênteses
+
+        ** -> Potência
+
+        * / %  -> Multiplicação, Divisão e resto da divisão. (será feito quem aparecer primeiro da esquerda para a direita.)
+
+        + -  -> por ultimo, Adição e subtração.
+    </pre>
+    <h2>Atribuição Simples:</h2>
+    <pre>
+        var a = 5 + 3          8
+        var b = a % 5          3
+        var c = 5 * b ** 2     45
+        var d = 10 - a / 2     6
+        var e = 6 * 2 / d      2
+        var f = b % e + 4 / e  3
+    </pre>
+    <h2>Auto-atribuição:</h2>
+    <pre>
+        var n = 3                 era 3
+        n = n + 4   ou   n += 4   agora é 7
+        n = n - 5   ou   n -= 5   agora é 2
+        n = n * 4   ou   n *= 4   agora é 8
+        n = n / 2   ou   n /= 2   agora é 4
+        n = n ** 2  ou   n **= 2  agora é 16
+        n = n % 5   ou   n %= 5   agora é 1
+    
+        Simplificando: n += 4, só quando a mesma variável se repete.
+    
+        Exemplos:
+    
+        > var num = 8
+        undefined
+        > num
+        8
+        > num += 2
+        10
+        > num
+        10
+        > num %= 2
+        0
+        > num = 3
+        3
+        > num **= 2
+        9
+        > num
+        9
+    </pre>
+
+    <h2>Incremento:</h2>
+
+    <pre>
+        var x = 5                        5
+        x = x + 1  ou  x += 1  ou x++    6
+        x = x - 1  ou  x -= 1  ou x--    5
+        incremento é uma simplificação maior x++ e x--
+    </pre>
+    <pre>
+        > var n = 10
+        undefined
+        > n
+        10
+        > n ++ (incremento)
+        10
+        > n
+        11
+        > n -- (decremento)
+        11
+        > n
+        10
+        > ++n (pré-incremento)
+        11
+        > --n (pós-decremento)
+        10
+    </pre>
+</main>
+</body>
+</html>
