@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minhas notas</title>
+</head>
+<body>
+    <h1>DOM - Document Object Model</h1>
+    <h2>Arvore DOM</h2>
+    <p>
+        raiz -> window(janela) <br>
+        <ul>
+            <li>Window</li>
+                <ol>
+                    <li>location</li>
+                    <li><abbr title="parent de HTML e child de window">document</abbr></li>
+                        <ol>
+                            <li><abbr title="parent de head e body e child de document">HTML</abbr></li>
+                            <ol>
+                                <li><abbr title="child filho de html">head</abbr></li>
+                                <ol>
+                                    <li>meta</li>
+                                    <li>title</li>
+                                </ol>
+                                <li><abbr title="child filho de html">body</abbr></li>
+                                <ol>
+                                    <li>h1</li>
+                                    <li>p</li>
+                                    <li>p</li>
+                                    <ol>
+                                        <li>strong</li>
+                                    </ol>
+                                    <li>div</li>
+                                </ol>
+                            </ol>
+                        </ol>
+                    <li>history</li>
+                </ol>
+        </ul>
+    </p>
+    
+    <script>
+        window.document.writeln('Olá, mundo! ')
+        window.document.writeln(window.document.charset )
+        window.document.writeln(window.navigator.appName)
+        window.document.writeln(window.document.URL)
+    </script>
+
+    <h2>Acessar elementos</h2>
+
+    <p>
+        por marca <br>
+        por ID <br>
+        por nome <br>
+        por Classe <br>
+        por seletor
+    </p>
+    <h2>Marca</h2>
+    <p>getElementsByTagName()</p>
+    <h2>ID</h2>
+    <p>getElementById()</p>
+    <h2>Name</h2>
+    <p>getElementsByName()</p>
+    <h2>Casse</h2>
+    <p>getElementsByClasseName</p>
+    <h2>Seletor</h2>
+    <p>
+        querySelector() <br>
+        querySelectorAll()
+
+    </p>
+
+
+</body>
+</html>
