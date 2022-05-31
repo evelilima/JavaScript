@@ -5,8 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+        body {
+            background-image: url(imagens/wallpaper005.jpg);
+            background-repeat: no-repeat;
+            font: normal 18px arial;
+            margin: auto;
+            min-width: 400px;
+            max-width: 800px;
+            min-height: 90vh;
+        }
+        .cx {
+            margin-top: 70px;
+            background-color: rgb(246, 245, 245);
+            padding: 10px 20px 30px 20px;
+            text-align: center;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.307);
+            border-radius: 10px;
+        }
+        div.cx > h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5em;
+            font-variant: small-caps;
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.223);
+        }
+        div.cx > p {
+            margin: auto;
+            display: inline-block;
+            min-width: 300px;
+            max-width: 800px;
+        }
+        input.caixa{
+            width: 70px;
+            height: 20px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.176);
+            border: 1px solid;
+            text-align: center;
+        }
+        input.botao {
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+            padding: 3px;
+            border-radius: 5px;
+            border: 1px solid;
+            width: 70px;
+            font-weight: bold;
+        }
+        input.botao:hover{
+            background-color: rgb(225, 224, 224);
+            width: 72px;
+            height: 25px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="cx">
+        <h1>Qual é o seu país</h1>
+           
+           Qual país você nasceu? <input class="caixa" type="text" name="pais" id="pais">
+           <input class="botao" type="button" value="conferir" onclick="clicar()">
+           <div id="res"></div>
+    </div>
+
+   <script>
+       function clicar() {
+           var p = document.querySelector('input#pais')
+           var res = document.querySelector('div#res')
+           res.innerHTML = `<p>Seu País é <strong>${p.value.toUpperCase()}</strong></p>`
+           if(p.value == 'Brasil') {
+               res.innerHTML += `Então você é brasileiro(a).`
+           }else {
+            res.innerHTML += `Então você é estrangeiro(a).`
+           }
+           
+           
+       }
+   </script>
 </body>
 </html>
