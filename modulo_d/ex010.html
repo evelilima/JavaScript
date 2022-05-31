@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+        body {
+            background-image: url(imagens/wallpaper005.jpg);
+            font: normal 18px arial;
+            margin: auto;
+            min-width: 400px;
+            max-width: 800px;
+            min-height: 90vh;
+        }
+        .cx {
+            margin-top: 70px;
+            background-color: rgb(246, 245, 245);
+            padding: 10px 20px 30px 20px;
+            text-align: center;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.307);
+            border-radius: 10px;
+        }
+        div.cx > h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.5em;
+            font-variant: small-caps;
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.223);
+        }
+        div.cx > p {
+            margin: auto;
+            display: inline-block;
+            min-width: 300px;
+            max-width: 800px;
+        }
+        input.caixa{
+            width: 70px;
+            height: 20px;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.176);
+            border: 1px solid;
+            text-align: center;
+        }
+        input.botao {
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+            padding: 3px;
+            border-radius: 5px;
+            border: 1px solid;
+            width: 70px;
+            font-weight: bold;
+        }
+        input.botao:hover{
+            background-color: rgb(225, 224, 224);
+            width: 72px;
+            height: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="cx">
+        <h1>Sistema de Multas</h1>
+        
+        <p>
+            Velocidade do carro: <input class="caixa" type="number" name="txtvel" id="txtvel"> Km/h
+            <input class="botao" type="button" value="Verificar" onclick="calcular()">
+            <div id="res"></div>
+        </p>
+    </div>
+
+    <script>
+       function calcular() {
+            var txtv = document.querySelector('input#txtvel')
+            var res = document.querySelector('div#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}km/h</strong></p>`
+            if (vel > 60){
+                res.innerHTML += `<p>Você está <strong>MULTADO</strong> por exesso de velocidade!`
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+        }
+    </script>
+    
+</body>
+</html>
