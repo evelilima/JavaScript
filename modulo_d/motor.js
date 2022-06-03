@@ -1,4 +1,4 @@
-var bomba = 'cesto quebrado'
+var bomba = 'tampa rachada'
 
 if (bomba == 'não funciona') {
      console.log('Analizar problema e fazer orçamento.')
@@ -11,7 +11,6 @@ else if (bomba == 'motor') {
 } 
 else if (bomba == 'rolamento') {
     console.log('Trocar rolamento.')
-
 } 
 else if (bomba == 'eixo enferrujado' || 'eixo vazando') {
 
@@ -21,7 +20,8 @@ else if (bomba == 'eixo enferrujado' || 'eixo vazando') {
     else if (bomba == 'eixo vazando') {
         console.log('Trocar selo mecânico.')
     } 
-} else if (bomba == 'tampa rachada' || 'cesto quebrado') {
+}
+else if (bomba == 'tampa rachada' || 'cesto quebrado') {
 
     if (bomba == 'tampa rachada') {
         console.log('Trocar tampa hidráulica.')
