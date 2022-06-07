@@ -13,7 +13,7 @@ function verificar() {
         img.setAttribute('id', 'foto')
         if (fsex[0].checked) {
             gênero = 'Homem'
-            if (idade >= 0 && idade < 12){
+            if (idade >= 0 && idade <= 12){
                 img.setAttribute('src', 'criança_menino_250.png')
 
             }else if (idade < 21){
@@ -43,6 +43,7 @@ function verificar() {
             }
         }
         res.style.textAlign = 'center'
+        img.style.marginTop = '20px'
         res.innerHTML = `Detectamos ${gênero} com ${idade} anos.`
         res.appendChild(img)
     }
